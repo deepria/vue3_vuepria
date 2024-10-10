@@ -95,9 +95,9 @@ watchEffect(async () => {
   </div>
   <div>
     {{ x }} {{ y }} {{ sumVal }}  {{ obj.count }}<br>
-    <button @click="x++">x++</button>
-    <button @click="y++">y++</button>
-    <button @click="obj.count++">cnt++</button>
+    <button  @click="x++">x++</button>
+    <button  @click="y++">y++</button>
+    <button  @click="obj.count++">cnt++</button>
   </div>
 
 
@@ -108,7 +108,7 @@ watchEffect(async () => {
       <li>Title : {{ data.title }}</li>
       <li>Completed : {{ data.completed }}</li>
     </ul>
-    <button @click="todoId = todoId > 1 ? todoId -1 : todoId">prev</button>
-    <button @click="todoId++">next</button>
+    <button  @click="todoId = todoId > 1 ? todoId -1 : todoId">prev</button>
+    <button  @click="todoId++">next</button>
   </div>
 </template>

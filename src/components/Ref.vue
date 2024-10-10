@@ -45,7 +45,7 @@ function wtf(el){
 
 <template>
   <input ref="input" @keyup.enter="push" />
-  <button @click="push">push</button>
+  <button  @click="push">push</button>
 
 
   <ul>

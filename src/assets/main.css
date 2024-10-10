@@ -1,35 +1,42 @@
-@import './base.css';
+@import 'base.css';
+@import 'html.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+
+/* main.css - 모바일 웹뷰 특화 메인 스타일 */
+
+.header {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 2.5rem 0;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+.header h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.09375rem;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
+.navbar {
     display: flex;
-    place-items: center;
-  }
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 1rem;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.navbar a {
+    color: white;
+    padding: 0 0.625rem;
+}
+
+
+
+.footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
 }

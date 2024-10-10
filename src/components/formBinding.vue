@@ -35,13 +35,13 @@ function greet(event) {
 
 <template>
   <div>
-    <button @click="greet">환영하기</button><br>
+    <button  @click="greet">환영하기</button><br>
     {{ target }}
   </div>
 
 
   <div>
-    <span>여러 줄 메세지:</span><br>
+    <span >여러 줄 메세지:</span><br>
     <p style="white-space: pre-line;">{{ message }}</p>
     <textarea v-model.trim().lazy="message" placeholder="여러 줄을 추가해보세요"></textarea>
   </div>

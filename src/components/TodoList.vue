@@ -26,7 +26,7 @@ function addNewTodo() {
         id="new-todo"
         placeholder="E.g. Feed the cat"
     />
-    <button>Add</button>
+    <button >Add</button>
   </form>
   <ul>
     <todo-item

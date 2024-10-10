@@ -5,7 +5,7 @@ defineEmits(['remove'])
 <template>
   <li>
     {{ title }}
-    <button @click="$emit('remove')">done</button>
+    <button  @click="$emit('remove')">done</button>
   </li>
 </template>
 

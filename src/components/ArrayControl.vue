@@ -85,24 +85,24 @@ onMounted(() => {
 
 <template>
   <div>
-    <button @click="unshift">unshift</button>
-    <button @click="shift">shift</button>
+    <button  @click="unshift">unshift</button>
+    <button  @click="shift">shift</button>
     <br>
-    <button @click="push">push</button>
-    <button @click="pop">pop</button>
+    <button  @click="push">push</button>
+    <button  @click="pop">pop</button>
     <br>
-    <button @click="slice">slice (first two)</button>
+    <button  @click="slice">slice (first two)</button>
 
     <br>
-    <button @click="sort">sort</button>
-    <button @click="reverse">reverse</button>
-    <button @click="reset">reset</button>
+    <button  @click="sort">sort</button>
+    <button  @click="reverse">reverse</button>
+    <button  @click="reset">reset</button>
     <br>
     count : {{obj.nested.count}}
     <br>
-    <span> {{elements}}</span>
+    <span > {{elements}}</span>
     <br>
-    <span> {{ sliceStr }}</span>
+    <span > {{ sliceStr }}</span>
   </div>
 </template>
 

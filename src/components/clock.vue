@@ -1,5 +1,6 @@
 <script setup>
 import {ref} from 'vue';
+
 const obj = ref({
   now: {
     time: '',
@@ -24,11 +25,12 @@ function getNow() {
       .toString()
       .padStart(2, 0)}-${date.getDate().toString().padStart(2, 0)}`
 }
-setInterval(getNow,1000);
+
+setInterval(getNow, 1000);
 </script>
 <template>
   <div> {{ obj.now.dateTime }}</div>
-  <div> {{ obj.now.time }} {{ obj.now.ampm }} </div>
+  <div> {{ obj.now.time }} {{ obj.now.ampm }}</div>
 </template>
 
 

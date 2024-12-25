@@ -2,7 +2,7 @@
   <div class="main-container">
     <!-- 입력 및 서브밋 컨테이너 -->
     <div class="form-container">
-      <h1 class="header">Get Data</h1>
+      <h1 class="header">Put Data</h1>
       <div class="form-group">
         <label for="part">Partition Key</label>
         <input
@@ -25,7 +25,29 @@
         />
       </div>
 
-      <button class="button-primary" @click="get">Get Data</button>
+      <div class="form-group">
+        <label for="pk">Primary Key</label>
+        <input
+            id="pk"
+            type="text"
+            v-model="pk"
+            placeholder="Enter primary key"
+            class="styled-input"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="value">Value</label>
+        <input
+            id="value"
+            type="text"
+            v-model="value"
+            placeholder="Enter value"
+            class="styled-input"
+        />
+      </div>
+
+      <button class="button-primary" @click="put">Put Data</button>
     </div>
 
     <!-- 결과 컨테이너 -->
@@ -46,19 +68,21 @@
 
 <script>
 import {ref} from "vue";
-import {getData} from "../services/dynamo.js";
+import {postData} from "../services/dynamo.js";
 
 export default {
   setup() {
     const part = ref("");
     const index = ref("");
+    const pk = ref("");
+    const value = ref("");
     const data = ref(null);
     const error = ref(null);
 
-    const get = async () => {
+    const put = async () => {
       try {
         error.value = null;
-        data.value = await getData(part.value, index.value);
+        data.value = await postData(part.value, index.value, pk.value, value.value);
       } catch (err) {
         error.value = "Failed to load user data.";
       }
@@ -67,9 +91,11 @@ export default {
     return {
       part,
       index,
+      pk,
+      value,
       data,
       error,
-      get,
+      put,
     };
   },
 };

@@ -3,6 +3,7 @@
     <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/get">Get</router-link> |
+      <router-link to="/put">Put</router-link> |
 <!--      <router-link to="/add-user">Add User</router-link> -->
     </nav>
     <router-view /> <!-- 라우트 컴포넌트를 렌더링 -->
